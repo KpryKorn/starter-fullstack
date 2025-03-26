@@ -18,6 +18,10 @@ export default function Header() {
       name: "Posts",
       path: "/posts",
     },
+    {
+      name: "Users",
+      path: "/users",
+    },
   ];
 
   return (

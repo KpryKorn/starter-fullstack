@@ -10,7 +10,7 @@ export const auth = betterAuth({
       ...schema,
     },
   }),
-  trustedOrigins: [process.env.CORS_ORIGIN!],
+  trustedOrigins: ["http://localhost:3001"],
   emailAndPassword: {
     enabled: true,
   },

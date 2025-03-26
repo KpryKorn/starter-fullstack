@@ -25,7 +25,14 @@ app.use(
     maxAge: 600,
   })
 );
-app.use("*", cors());
+app.use(
+  "/api/v1/*",
+  cors({
+    origin: "http://localhost:3001",
+    credentials: true,
+  })
+);
+// vérifie la session dans les headers
 app.use("*", async (c, next) => {
   const session = await auth.api.getSession({ headers: c.req.raw.headers });
 
@@ -48,14 +55,12 @@ app.get("/health", (c) => {
   return c.json({ status: "ok" });
 });
 
-// app
+// applique un middleware pour vérifier si l'utilisateur est connecté
 app.use("/api/v1/*", async (c, next) => {
   const user = c.get("user");
-  console.log("middleware user:", user);
   const session = c.get("session");
-  console.log("middleware session:", session);
 
-  if (!user) {
+  if (!user || !session) {
     return c.json(
       {
         error: "Unauthorized",
