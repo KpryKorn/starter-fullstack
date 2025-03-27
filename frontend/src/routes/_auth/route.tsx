@@ -1,3 +1,5 @@
+// IMPORTANT
+// sert de layout à toutes les pages Auth
 import { createFileRoute, Link, Outlet } from "@tanstack/react-router";
 import Footer from "@/components/layout/Footer";
 

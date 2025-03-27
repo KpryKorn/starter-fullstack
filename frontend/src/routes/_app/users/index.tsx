@@ -18,7 +18,14 @@ function RouteComponent() {
   });
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return (
+      <main className="container mx-auto py-12 min-h-[50vh] flex items-center justify-center">
+        <div className="animate-pulse flex flex-col items-center gap-4">
+          <div className="w-12 h-12 rounded-full border-4 border-gray-300 border-t-blue-500 animate-spin"></div>
+          <p className="text-lg font-medium text-gray-700">Loading...</p>
+        </div>
+      </main>
+    );
   }
 
   if (isError) {
