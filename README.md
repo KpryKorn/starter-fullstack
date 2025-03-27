@@ -6,8 +6,8 @@ Un template pour projets fullstack utilisant des technologies modernes.
 
 ### Backend
 
-- [Hono](https://hono.dev) - Framework web léger et rapide
-- [Drizzle](https://orm.drizzle.team) - ORM SQL typé pour TypeScript
+- [Hono](https://hono.dev) - Framework web léger et rapide (> Express)
+- [Drizzle](https://orm.drizzle.team) - ORM typé avec syntaxe très proche du SQL
 - [SQLite](https://www.sqlite.org) - Base de données légère et embarquée
 - [Better Auth](https://www.better-auth.com/docs) - Librairie d'authentification
 
