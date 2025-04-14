@@ -25,6 +25,9 @@ Un template pour projets fullstack utilisant des technologies modernes.
 git clone https://github.com/KpryKorn/starter-fullstack.git
 cd starter-fullstack
 
+# Créer les variables d'environnement
+> ctrl+c / ctrl+v le fichier .env.example sans oublier la clé Better Auth
+
 # Installer les dépendances
 npm install
 
